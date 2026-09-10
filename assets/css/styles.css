@@ -3,10 +3,141 @@
 }
 
 :root {
-  --dark-green-primary: #143c3c;
-  --light-green-primary: #83a17d;
+  --primary-black: #152427;
+  --primary-dark-green: #143c3c;
+  --secondary-light-grey: #6a8383;
+  --secondary-light-green: #e2eddf;
+  --text-dark-grey: #575d5e;
+  --text-light-grey: #7d8188;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  height: 7000px;
+}
+
+/* Common */
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.btn {
+  --height: 57px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 173px;
+  height: var(--height);
+  padding: 0 20px;
+  background: var(--primary-dark-green, #143c3c);
+  border-radius: 40px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1140px;
+  margin-inline: auto;
+  width: calc(100% - 48px);
+}
+
+/* Header */
+.header.sticky {
+  position: sticky;
+  top: -15px;
+}
+
+.header-inner {
+  position: relative;
+  display: flex;
+  padding: 28px 0 13px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Public Sans";
+}
+
+.header-inner::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #dddcdc 51.09%,
+    rgba(212, 212, 212, 0) 99.68%
+  );
+}
+
+.header .inner-right {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav-list {
+  display: flex;
+}
+
+.header .nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 19px;
+  color: var(--text-dark-grey);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.56;
+}
+
+.header .nav-link.active {
+  color: var(--primary-black);
+}
+
+.header .nav-link::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 21px;
+  bottom: -20px;
+  opacity: 0;
+  width: 16px;
+  height: 2px;
+  background: var(--primary-dark-green);
+  transition: 0.25s;
+}
+
+.header .nav-link.active::after,
+.header .nav-link:hover::after {
+  opacity: 1;
+}
+
+.header .sign-up-btn {
+  margin-left: 69px;
+  border: 1.5px solid var(--primary-dark-green);
 }
