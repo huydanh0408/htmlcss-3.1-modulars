@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-green-primary: #143c3c;
+  --light-green-primary: #83a17d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
