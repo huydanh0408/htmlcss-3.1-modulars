@@ -77,8 +77,22 @@ button {
   display: block;
   width: 25px;
   height: 1px;
-  background: var(--Primary-color-black, #152427);
+  background: currentColor;
   line-height: 1.625rem;
+}
+
+.section-heading {
+  color: var(--primary-black, #152427);
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 1.24; /* 123.81% */
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 /* Header */
@@ -341,4 +355,110 @@ button {
   display: flex;
   align-items: center;
   column-gap: 11px;
+}
+
+/* Service */
+.service {
+  margin-top: 106px;
+}
+
+.service .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+}
+
+.service .service-heading {
+  position: relative;
+  max-width: 520px;
+}
+
+.service .service-heading::after {
+  content: "";
+  display: inline-block;
+  width: 66px;
+  height: 2px;
+  margin-left: 16px;
+  background: currentColor;
+  transform: translateY(-9px);
+}
+
+.service .controls {
+  display: flex;
+  column-gap: 17px;
+  padding: 0 72px 9px 0;
+}
+
+.service .service-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--secondary-light-green);
+  color: var(--primary-black);
+}
+
+.service .service-btn:hover {
+  background: var(--primary-dark-green);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.service .list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 16px;
+  justify-content: space-between;
+  margin-top: 76px;
+}
+
+.service .item {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.service .item:hover {
+  background: #fff;
+  box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+}
+
+.service .item .thumb {
+  display: block;
+  width: 100%;
+  height: 318px;
+  object-fit: cover;
+  transition: 0.25s;
+}
+
+.service .item:hover .thumb {
+  transform: scale(1.1);
+}
+
+.service .item-body {
+  padding: 24px 36px 24px 0;
+  transition: 0.25s;
+}
+
+.service .item:hover .item-body {
+  padding-inline: 18px;
+}
+
+.service .item-heading {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--primary-black, #152427);
+}
+
+.service .item-desc {
+  max-width: 268px;
+  margin-top: 18px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.72;
+  color: var(--text-light-grey, #7d8188);
 }
