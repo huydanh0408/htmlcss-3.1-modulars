@@ -60,6 +60,27 @@ button {
   width: calc(100% - 48px);
 }
 
+.section-label {
+  position: relative;
+  padding-left: 46px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.63;
+  color: var(--primary-black, #152427);
+}
+
+.section-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  display: block;
+  width: 25px;
+  height: 1px;
+  background: var(--Primary-color-black, #152427);
+  line-height: 1.625rem;
+}
+
 /* Header */
 .header.sticky {
   position: sticky;
@@ -293,4 +314,31 @@ button {
 
 .hero .media-img:nth-child(even) {
   align-self: flex-end;
+}
+
+/* Clients */
+.clients {
+  margin-top: 42px;
+}
+
+.clients .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 210px;
+  padding: 0 122px;
+  background: var(--secondary-light-green);
+  border-radius: 999px;
+}
+
+.clients .client {
+  display: block;
+  max-width: 144px;
+  height: auto;
+}
+
+.clients .client-agworld {
+  display: flex;
+  align-items: center;
+  column-gap: 11px;
 }
