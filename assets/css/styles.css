@@ -64,6 +64,8 @@ button {
 .header.sticky {
   position: sticky;
   top: -15px;
+  z-index: 2;
+  background-color: #fff;
 }
 
 .header-inner {
@@ -140,4 +142,155 @@ button {
 .header .sign-up-btn {
   margin-left: 69px;
   border: 1.5px solid var(--primary-dark-green);
+}
+
+/* Hero */
+.hero .inner::before,
+.hero .inner::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero .inner::before {
+  background:
+    url(../icons/decor-flower.svg) 254px 35px/ 72px 72px no-repeat,
+    url(../icons/decor-trunk.svg) 287px 18px/ 545px 362px no-repeat;
+}
+
+.hero .inner::after {
+  background:
+    url(../icons/decor-flower.svg) 34px 52px/ 72px 72px no-repeat,
+    url(../icons/decor-trunk.svg) 67px 34px/ 545px 362px no-repeat;
+  rotate: 174deg;
+}
+
+.hero .inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 98px);
+  font-family: "Public Sans";
+}
+
+.hero .content {
+  max-width: 393px;
+}
+
+.hero .heading {
+  max-width: 368px;
+  font-size: 3.125rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--primary-black, #152427);
+}
+
+.hero .desc {
+  max-width: 341px;
+  margin-top: 20px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.56; /* 155.556% */
+  color: var(--text-dark-grey, #575d5e);
+}
+
+.hero .actions {
+  margin-top: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 43px;
+}
+
+.hero .watch-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .btn-wrap {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: #83a17d;
+  border-radius: 50%;
+}
+
+.hero .watch-btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.hero .watch-btn:hover .btn-wrap::before {
+  rotate: 180deg;
+}
+
+.hero .btn-wrap::before {
+  content: "";
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  background: url("../icons/ellipse.svg") 0px / contain no-repeat;
+  transition: 0.5s;
+}
+
+.hero .btn-wrap .icon {
+  color: #fef6fb;
+}
+
+.hero .watch-text {
+  margin-left: 15px;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary-black);
+}
+
+.hero .media {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+  max-width: 671px;
+  height: 543px;
+  padding-right: 25px;
+}
+
+.hero .media::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 340px;
+  height: 340px;
+  margin: auto;
+  border-radius: 50%;
+  background: #4dbb9a;
+  filter: blur(137px);
+}
+
+.hero .media-img {
+  display: block;
+  width: 202px;
+  height: 466px;
+  object-fit: cover;
+  border-radius: 110px;
+}
+
+.hero .media-img:nth-child(even) {
+  align-self: flex-end;
 }
