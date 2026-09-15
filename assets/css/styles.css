@@ -88,6 +88,21 @@ button {
   line-height: 1.24; /* 123.81% */
 }
 
+.heading-w-dash {
+  position: relative;
+  max-width: 520px;
+}
+
+.heading-w-dash::after {
+  content: "";
+  display: inline-block;
+  width: 66px;
+  height: 2px;
+  margin-left: 16px;
+  background: currentColor;
+  transform: translateY(-9px);
+}
+
 .line-clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -369,21 +384,6 @@ button {
   margin-top: 12px;
 }
 
-.service .service-heading {
-  position: relative;
-  max-width: 520px;
-}
-
-.service .service-heading::after {
-  content: "";
-  display: inline-block;
-  width: 66px;
-  height: 2px;
-  margin-left: 16px;
-  background: currentColor;
-  transform: translateY(-9px);
-}
-
 .service .controls {
   display: flex;
   column-gap: 17px;
@@ -662,4 +662,88 @@ button {
   font-weight: 500;
   line-height: 1.72;
   color: var(--text-light-grey, #7d8188);
+}
+
+/* Progress */
+.progress {
+  margin-top: 115px;
+}
+
+.progress .section-heading {
+  margin-top: 20px;
+}
+
+.progress .list {
+  margin-top: 81px;
+}
+
+.progress .item {
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content 0.6fr 1fr;
+  column-gap: 50px;
+  padding: 46px 20px 24px;
+}
+
+.progress .item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    180deg,
+    #83a17d 4.17%,
+    rgba(131, 161, 125, 0) 36.46%
+  );
+}
+
+.progress .item-1 {
+  padding: 54px 30px;
+  background: var(--secondary-light-green);
+  border-radius: 33px;
+}
+
+.progress .item-1::after {
+  display: none;
+}
+
+.progress .progress-img {
+  position: absolute;
+  right: 92px;
+  bottom: 0;
+  display: block;
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.progress .item-number {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: var(--primary-dark-green, #143c3c);
+}
+
+.progress .item-heading {
+  color: var(--primary-black, #152427);
+  margin-top: 22px;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.progress .item-desc {
+  padding-right: 20px;
+  font-family: "Public Sans";
+  font-size: 1.125rem;
+  line-height: 1.56;
+  color: var(--text-light-grey, #7d8188);
+}
+
+.progress .item-link {
+  display: inline-block;
+  padding: 22px 16px 0 3px;
+  font-size: 1.125rem;
+  color: var(--text-dark-grey, #575d5e);
+  text-decoration: underline;
 }
