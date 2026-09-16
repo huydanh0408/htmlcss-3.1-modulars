@@ -13,7 +13,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  height: 8000px;
 }
 
 /* Common */
@@ -1016,4 +1015,130 @@ button {
 
 .blog .item:hover .item-time {
   margin-right: 0px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 102px;
+  padding: 72px 0 42px;
+  background: var(--primary-dark-green);
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .footer-heading {
+  max-width: 411px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.footer .form {
+  max-width: 354px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--secondary-light-grey);
+}
+
+.footer .input {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.375rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.footer .input::placeholder {
+  color: var(--secondary-light-grey, #6a8383);
+}
+
+.footer .form:focus-within {
+  border-bottom-color: #fff;
+}
+
+.footer .submit {
+  padding: 8px 16px;
+  color: #c4c4c4;
+  cursor: pointer;
+}
+
+.footer .socials {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+  margin-top: 47px;
+}
+
+.footer .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid #265252;
+}
+
+.footer .social-link:hover {
+  border-color: transparent;
+  background-color: #a75325;
+  cursor: pointer;
+}
+
+.footer .footer-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 50px;
+  font-family: "Public Sans";
+}
+
+.footer .nav-heading {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.56;
+  color: #fff;
+}
+
+.footer .nav-list {
+  margin-top: 6px;
+}
+
+.footer .nav-link {
+  color: var(--secondary-light-grey, #6a8383);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 2.25;
+}
+
+.footer .copyright {
+  position: relative;
+  margin-top: 45px;
+  text-align: center;
+  color: var(--secondary-light-grey, #6a8383);
+  font-size: 1rem;
+  padding-top: 29px;
+}
+
+.footer .copyright::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #143c3c 2.28%,
+    #295a5a 55.65%,
+    rgba(38, 82, 82, 0) 102.06%
+  );
 }
